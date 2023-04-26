@@ -12,7 +12,7 @@ import LoadingDots from "../components/LoadingDots";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional");
+  const [vibe, setVibe] = useState<VibeType>("Sweet");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   const bioRef = useRef<null | HTMLDivElement>(null);
@@ -23,12 +23,12 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} twitter biographies with no hashtags and clearly labeled "1." and "2.". ${
+  const prompt = `Generate 2 ${vibe} two cute messages with no hashtags and clearly labeled "1." and "2.". ${
     vibe === "Funny"
-      ? "Make sure there is a joke in there and it's a little ridiculous."
+      ? "Make sure there is a joke in there and it's a little ridiculous, yet sweet."
       : null
   }
-      Make sure each generated biography is less than 160 characters, has short sentences that are found in Twitter bios, and base them on this context: ${bio}${
+      Make sure each generated note is less than 160 characters, has short sentences that are found in love letters, and base them on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
           <p>Star on GitHub</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using chatGPT
+          Generate a cute note for your lover's breadbox!
         </h1>
         <p className="text-slate-500 mt-5">47,118 bios generated so far.</p>
         <div className="max-w-xl w-full">
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "Example: nice food yesterday! Love some mozarella with tomatoes. "
             }
           />
           <div className="flex mb-5 items-center space-x-3">
