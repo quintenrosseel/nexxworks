@@ -102,11 +102,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{" "}
-              <span className="text-slate-500">
-                (or write a few sentences about yourself)
-              </span>
-              .
+              Write something that your lover recently did for you{" "}
             </p>
           </div>
           <textarea
